@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/ficha"
+            android:icon="@mipmap/huellaa"
+            android:title="Ficha" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@mipmap/conejo"
+            android:title="Progreso" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@mipmap/caballo"
+            android:title="Imagenes" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@mipmap/hueso"
+            android:title="Configuración" />
+    </group>
+
+    <item android:title="Compartir">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@mipmap/compartir"
+                android:title="Compartir" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@mipmap/paloma"
+                android:title="Enviar" />
+        </menu>
+    </item>
+
+</menu>
