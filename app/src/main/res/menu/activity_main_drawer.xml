@@ -9,28 +9,37 @@
         <item
             android:id="@+id/nav_gallery"
             android:icon="@mipmap/conejo"
-            android:title="Progreso" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@mipmap/caballo"
-            android:title="Imagenes" />
+            android:title="Historial" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@mipmap/hueso"
-            android:title="Configuración" />
+            android:title="Actualizaciones" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@mipmap/compartir"
+            android:title="Agregar nuevo perfil" />
+
     </group>
 
-    <item android:title="Compartir">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@mipmap/compartir"
-                android:title="Compartir" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@mipmap/paloma"
-                android:title="Enviar" />
-        </menu>
-    </item>
+
+        <item android:title="Equipo">
+            <menu>
+                <item
+                    android:icon="@drawable/tel"
+                    android:title="Stephanie Salazar"
+                    />
+                <item
+                    android:icon="@drawable/idpusm"
+                    android:title="Paulette Ponce"
+                    />
+                <item
+                    android:icon="@drawable/tel"
+                    android:title="Antonio Cayulao"
+                    />
+            </menu>
+        </item>
+
+
+
 
 </menu>

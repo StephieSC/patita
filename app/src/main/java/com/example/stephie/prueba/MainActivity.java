@@ -31,16 +31,23 @@ public class MainActivity extends AppCompatActivity
         Button boton2 = (Button) findViewById(R.id.button2);
         Button boton3 = (Button) findViewById(R.id.button3);
 
-        Toast toast = Toast.makeText(this, "Mensaje 2", Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-        toast.show();
+
 
         boton2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Toast toast1 =
                         Toast.makeText(getApplicationContext(),
-                                "Toast por defecto", Toast.LENGTH_SHORT);
+                                "Desafío: 10 segundos", Toast.LENGTH_SHORT);
+                toast1.show();
+            }
+        });
+        boton3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Toast toast1 =
+                        Toast.makeText(getApplicationContext(),
+                                "Desafío: 15 segundos", Toast.LENGTH_SHORT);
                 toast1.show();
             }
         });
@@ -48,8 +55,10 @@ public class MainActivity extends AppCompatActivity
         boton1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent boton1  = new Intent(MainActivity.this,MainFichaActivity.class);
-                startActivity(boton1);
+                Toast toast1 =
+                        Toast.makeText(getApplicationContext(),
+                                "Desafío: 5 segundos", Toast.LENGTH_SHORT);
+                toast1.show();
             }
         });
 
@@ -57,7 +66,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show();
             }
         });
@@ -81,29 +90,29 @@ public class MainActivity extends AppCompatActivity
             super.onBackPressed();
         }
     }
-
-   /* @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }*/
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+    /*
+        @Override
+        public boolean onCreateOptionsMenu(Menu menu) {
+            // Inflate the menu; this adds items to the action bar if it is present.
+            getMenuInflater().inflate(R.menu.main, menu);
             return true;
         }
 
-        return super.onOptionsItemSelected(item);
-    }
+            @Override
+           public boolean onOptionsItemSelected(MenuItem item) {
+                // Handle action bar item clicks here. The action bar will
+                // automatically handle clicks on the Home/Up button, so long
+                // as you specify a parent activity in AndroidManifest.xml.
+                int id = item.getItemId();
 
+                //noinspection SimplifiableIfStatement
+                if (id == R.id.action_settings) {
+                    return true;
+                }
+
+                return super.onOptionsItemSelected(item);
+            }
+        */
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -117,15 +126,14 @@ public class MainActivity extends AppCompatActivity
 
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
+            Intent historial  = new Intent(MainActivity.this,HistorialActivity.class);
+            startActivity(historial);
+        }  else if (id == R.id.nav_manage) {
+            Intent peso  = new Intent(MainActivity.this,PesoActivity.class);
+            startActivity(peso);
         } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+            Intent agregar  = new Intent(MainActivity.this,DatosActivity.class);
+            startActivity(agregar);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -25,51 +25,42 @@
         android:textIsSelectable="false"
         android:textStyle="bold"
         android:textColor="#010000"
-        android:elevation="20dp"
         android:visibility="visible"
         android:background="#feffd3" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nivel 1"
         android:id="@+id/button1"
         android:layout_above="@+id/button2"
         android:layout_centerHorizontal="true"
         android:layout_weight="1"
-        android:textStyle="bold"
-        android:textColor="#010000"
-        android:background="#c9a264"
+        android:background="@android:color/transparent"
         android:layout_marginBottom="10dp"
-        android:elevation="30dp"
-        android:drawableRight="@drawable/huesito"
-        android:drawablePadding="10dp"/>
+        android:drawableLeft="@drawable/n1"
+
+        />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nivel 2"
         android:id="@+id/button2"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
-        android:textStyle="bold"
-        android:textColor="#010000"
-        android:background="#c8c09d"
-        android:elevation="30dp" />
+        android:background="@android:color/transparent"
+
+        android:drawableLeft="@drawable/n2"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nivel 3"
         android:id="@+id/button3"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:layout_weight="1"
-        android:background="#b6b6b6"
-        android:textStyle="bold"
-        android:textColor="#010000"
         android:layout_below="@+id/button2"
-        android:elevation="30dp" />
+        android:drawableLeft="@drawable/n3"
+        android:background="@android:color/transparent"
+        />
 
 
 

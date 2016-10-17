@@ -7,6 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorSec"
     tools:context="com.example.stephie.prueba.SplashScreen">
 
 
@@ -15,15 +16,41 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView2"
         android:src="@drawable/tel"
-        android:layout_above="@+id/imageView3"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentBottom="true"
+         />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView3"
-        android:src="@drawable/idp"
+        android:src="@drawable/idpusm"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_toRightOf="@+id/imageView2"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/texto1"
+        android:text="Auspicia:"
+        android:textSize="20dp"
+        android:layout_above="@+id/imageView2"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/texto2"
+        android:text="Colabora:"
+        android:textSize="20dp"
+        android:layout_toRightOf="@+id/texto1"
+        android:layout_above="@+id/imageView3"
+        android:layout_marginLeft="75dp"
+       />
+    <ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/imageView4"
+    android:src="@drawable/fitpet"
+        android:layout_above="@+id/texto1"
+        android:layout_marginBottom="100dp"
+
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
