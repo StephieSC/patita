@@ -52,7 +52,7 @@ public class HistorialAdapter extends RecyclerView.Adapter<HistorialAdapter.Hist
         public void onBindViewHolder(HistorialViewHolder viewHolder, int i) {
             viewHolder.nivel.setText(items.get(i).getNivel());
             viewHolder.fecha.setText(items.get(i).getfecha());
-            viewHolder.logrado.setText("Visitas:"+String.valueOf(items.get(i).getLogrado()));
+            viewHolder.logrado.setText(String.valueOf(items.get(i).getLogrado()));
         }
 
 }

@@ -19,22 +19,20 @@ public class HistorialActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_historial);
-
-        List<Historial> items = new ArrayList();
-        items.add(new Historial(2, "Angel Beats",1));
-        items.add(new Historial(3, "Death Note", 0));
-        items.add(new Historial(1, "Fate Stay Night",0));
-        items.add(new Historial(1, "Welcome to the NHK", 1));
-        items.add(new Historial(2, "Suzumiya Haruhi", 1));
         // Obtener el Recycler
+        setContentView(R.layout.activity_historial);
         recycler= (RecyclerView)findViewById(R.id.reciclador);
         recycler.setHasFixedSize(true);
 
 // Usar un administrador para LinearLayout
-        lManager = new LinearLayoutManager(this);
+        lManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
         recycler.setLayoutManager(lManager);
-
+        List<Historial> items = new ArrayList<>();
+        items.add(new Historial(2, "13-10-2016",1));
+        items.add(new Historial(3, "14-10-2016", 0));
+        items.add(new Historial(1, "15-10-2016",0));
+        items.add(new Historial(1, "16-10-2016", 1));
+        items.add(new Historial(2, "17-10-2016", 1));
 // Crear un nuevo adaptador
         adapter = new HistorialAdapter(items);
         recycler.setAdapter(adapter);
