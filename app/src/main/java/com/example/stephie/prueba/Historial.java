@@ -25,5 +25,14 @@ public class Historial {
         public int getNivel() {
             return nivel;
         }
+        public void setNivel(int nivel){
+            this.nivel = nivel;
+        }
+        public void setFecha(String fecha){
+            this.fecha = fecha;
+        }
+    public void setLogrado(int logrado){
+        this.logrado = logrado;
+    }
 
 }

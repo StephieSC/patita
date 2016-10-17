@@ -34,11 +34,13 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ACTUALIZAR"
         android:id="@+id/botonactualizar"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/nuevopeso"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/actualizar"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -55,9 +57,10 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ACTUALIZAR IMAGEN"
         android:id="@+id/botonimagen"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/textView3"
-        android:layout_marginTop="20dp"/>
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/actualizar"/>
 </RelativeLayout>

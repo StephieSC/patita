@@ -20,7 +20,7 @@ public class HistorialAdapter extends RecyclerView.Adapter<HistorialAdapter.Hist
         this.items = items;
     }
 
-        public static class HistorialViewHolder extends RecyclerView.ViewHolder {
+        public class HistorialViewHolder extends RecyclerView.ViewHolder {
             // Campos respectivos de un item
             public TextView nivel;
             public TextView fecha;
@@ -50,7 +50,8 @@ public class HistorialAdapter extends RecyclerView.Adapter<HistorialAdapter.Hist
 
         @Override
         public void onBindViewHolder(HistorialViewHolder viewHolder, int i) {
-            viewHolder.nivel.setText(items.get(i).getNivel());
+            Historial historial = items.get(i);
+            viewHolder.nivel.setText("NIVEL: "+String.valueOf(historial.getNivel()));
             viewHolder.fecha.setText(items.get(i).getfecha());
             viewHolder.logrado.setText(String.valueOf(items.get(i).getLogrado()));
         }
