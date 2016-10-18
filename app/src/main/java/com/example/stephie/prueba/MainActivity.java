@@ -1,6 +1,7 @@
 package com.example.stephie.prueba;
 
 import android.content.ClipData;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -21,6 +22,9 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    public static int DESAFIO_1 = 5;
+    public static int DESAFIO_2 = 10;
+    public static int DESAFIO_3 = 15;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,12 +57,15 @@ public class MainActivity extends AppCompatActivity
         });
 
         boton1.setOnClickListener(new View.OnClickListener(){
+            Context context;
             @Override
             public void onClick(View v) {
                 Toast toast1 =
                         Toast.makeText(getApplicationContext(),
                                 "Desafío: 5 segundos", Toast.LENGTH_SHORT);
                 toast1.show();
+                Connection prueba1 = new Connection(DESAFIO_1, MainActivity.this);
+                prueba1.execute();
             }
         });
 
@@ -90,7 +97,7 @@ public class MainActivity extends AppCompatActivity
             super.onBackPressed();
         }
     }
-    /*
+
         @Override
         public boolean onCreateOptionsMenu(Menu menu) {
             // Inflate the menu; this adds items to the action bar if it is present.
@@ -107,12 +114,14 @@ public class MainActivity extends AppCompatActivity
 
                 //noinspection SimplifiableIfStatement
                 if (id == R.id.action_settings) {
+                    Intent i = new Intent(MainActivity.this, SettingsActivity.class);
+                    startActivity(i);
                     return true;
                 }
 
                 return super.onOptionsItemSelected(item);
             }
-        */
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
