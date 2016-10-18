@@ -21,8 +21,11 @@ public class HistorialActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_historial);
+
         // Obtener el Recycler
+        setContentView(R.layout.activity_historial);
         recycler= (RecyclerView)findViewById(R.id.reciclador);
         recycler.setHasFixedSize(true);
         // Crear un nuevo adaptador
@@ -31,11 +34,11 @@ public class HistorialActivity extends AppCompatActivity {
         recycler.setLayoutManager(layoutManager);
         recycler.setItemAnimator(new DefaultItemAnimator());
         recycler.setAdapter(adapter);
-        Historial item1 = new Historial(2, "Angel Beats",1);
-        Historial item2 = new Historial(3, "Death Note", 0);
-        Historial item3 = new Historial(1, "Fate Stay Night",0);
-        Historial item4 = new Historial(1, "Welcome to the NHK", 1);
-        Historial item5 = new Historial(2, "Suzumiya Haruhi", 1);
+        Historial item1 = new Historial(2, "13-10-2016",1);
+        Historial item2 = new Historial(3, "14-10-2016", 0);
+        Historial item3 = new Historial(1, "15-10-2016",0);
+        Historial item4 = new Historial(1, "16-10-2016", 1);
+        Historial item5 = new Historial(2, "17-10-2016", 1);
         items.add(item1);
         items.add(item2);
         items.add(item3);
@@ -43,11 +46,9 @@ public class HistorialActivity extends AppCompatActivity {
         items.add(item5);
 
 
-// Usar un administrador para LinearLayout
-        //lManager = new LinearLayoutManager(this);
-
         //notificar que los elementos cambiaron
         adapter.notifyDataSetChanged();
+
     }
 
 }

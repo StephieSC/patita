@@ -51,9 +51,9 @@ public class HistorialAdapter extends RecyclerView.Adapter<HistorialAdapter.Hist
         @Override
         public void onBindViewHolder(HistorialViewHolder viewHolder, int i) {
             Historial historial = items.get(i);
-            viewHolder.nivel.setText(String.valueOf(historial.getNivel()));
+            viewHolder.nivel.setText("NIVEL: "+String.valueOf(historial.getNivel()));
             viewHolder.fecha.setText(items.get(i).getfecha());
-            viewHolder.logrado.setText("Visitas:"+String.valueOf(items.get(i).getLogrado()));
+            viewHolder.logrado.setText(String.valueOf(items.get(i).getLogrado()));
         }
 
 }
